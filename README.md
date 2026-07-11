@@ -1,4 +1,4 @@
-# Nithish Parameswaran — Portfolio
+# Nithish Parameswaran — Personal Website
 
 A scroll-driven personal portfolio built with Next.js, GSAP, and Three.js. Features parallax sections, scroll-scrubbed typography reveals, a WebGL hobby gallery, and project case studies.
 
