@@ -25,7 +25,7 @@ const skillImages = [
   { src: '/images/postgres.png' },
   { src: '/images/mongodb.png' },
   // Version control
-  { src: '/images/git.png' },
+  { src: '/images/Git.png' },
 ];
 
 // Titles crossfade as you scroll; each centers on the given image index.
