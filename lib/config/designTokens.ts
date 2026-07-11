@@ -1,0 +1,171 @@
+// CANONICAL token source. globals.css :root mirrors the 7 base values below
+// (colors + motion) for the CSS-class layer (.btn/.label/keyframes); that
+// mirror is guarded by tests/unit/tokens.test.ts. Change values HERE first.
+export const DESIGN_TOKENS = {
+  fonts: {
+    body: "var(--font-spline-mono), ui-monospace, monospace",
+    display: "var(--font-sofia), system-ui, sans-serif",
+    label: "var(--font-sofia), system-ui, sans-serif",
+    mono: "var(--font-sofia), ui-monospace, monospace",
+    heroDisplay: "var(--font-playfair), serif",
+    logo: "var(--font-pacifico), cursive",
+  },
+  spacing: {
+    containerPadding: '64px',
+    sectionPadding: '96px',
+    headerPadding: '34px 64px',
+    tinyGap: '12px',
+    smallGap: '8px',
+    mediumGap: '24px',
+    largeGap: '48px',
+    xlargeGap: '56px',
+    xxlargeGap: '80px',
+  },
+  typography: {
+    header: {
+      fontSize: '34px',
+      fontWeight: 400,
+      fontStyle: 'normal',
+      letterSpacing: '0.5px',
+      lineHeight: 1,
+    },
+    label: {
+      fontSize: '16px',
+      fontWeight: 600,
+      letterSpacing: '1.2px',
+      textTransform: 'uppercase',
+    },
+    labelSmall: {
+      fontSize: '12px',
+      fontWeight: 600,
+      letterSpacing: '1.2px',
+      textTransform: 'uppercase',
+    },
+    heroTitle: {
+      fontSize: '300px',
+      fontWeight: 600,
+      fontFamily: "var(--font-playfair), serif",
+      lineHeight: 0.86,
+      letterSpacing: '-6px',
+    },
+    scrollLabel: {
+      fontSize: '12px',
+      fontWeight: 600,
+      letterSpacing: '1.2px',
+    },
+    aboutHeading: {
+      fontSize: '64px',
+      fontWeight: 700,
+      lineHeight: 1,
+    },
+    darkQuote: {
+      fontSize: '64px',
+      fontWeight: 900,
+      lineHeight: 1.18,
+    },
+    darkNarrative: {
+      fontSize: '24px',
+      fontWeight: 400,
+      lineHeight: 1.45,
+    },
+    darkEmphasis: {
+      fontSize: '28px',
+      fontWeight: 700,
+      lineHeight: 1.2,
+    },
+    processTitle: {
+      fontSize: '100px',
+      fontWeight: 600,
+      lineHeight: 1.1,
+      letterSpacing: '-3.2px',
+    },
+    processBoxTitle: {
+      fontSize: '32px',
+      fontWeight: 700,
+      letterSpacing: '1px',
+      textDecoration: 'underline',
+      textDecorationOffset: '6px',
+    },
+    processBoxText: {
+      fontSize: '16px',
+      fontWeight: 500,
+      lineHeight: 1.6,
+      letterSpacing: '0',
+    },
+    projectsHeading: {
+      fontSize: '48px',
+      fontWeight: 400,
+      lineHeight: 1,
+    },
+    projectTitle: {
+      fontSize: '32px',
+      fontWeight: 400,
+      lineHeight: 1.25,
+    },
+    projectDescription: {
+      fontSize: '16px',
+      lineHeight: 1.75,
+    },
+    certificationsLink: {
+      fontSize: '32px',
+      fontWeight: 400,
+      lineHeight: 1,
+    },
+    footerHeading: {
+      fontSize: '48px',
+      fontWeight: 400,
+      lineHeight: 1.15,
+    },
+    footerEmail: {
+      fontSize: '32px',
+      fontWeight: 400,
+      lineHeight: 1,
+    },
+    skillsHeading: {
+      fontSize: '64px',
+      fontWeight: 700,
+      lineHeight: 1,
+    },
+  },
+  dimensions: {
+    container: '1440px',
+    headerHeight: 'auto',
+    heroBackdrop: { width: '850px', height: '660px' },
+    heroBackdropRadius: '21px',
+    aboutSection: { width: '1300px', height: '500px' },
+    portraitHero: { width: '530px', height: '500px', borderRadius: '17px' },
+    portraitStory: { width: '200px', height: '300px', borderRadius: '2px' },
+    skillImage: { width: '176px', height: '300px' },
+    scrollIndicator: { lineHeight: '48px', gap: '12px' },
+    processBox: { width: '456px', height: '430px' },
+    processBoxBorder: '7px',
+    projectImage: { height: '322px' },
+    skillsContainer: { height: '1060px' },
+  },
+  colors: {
+    background: '#F7F7F7',
+    text: '#101010',
+    textSecondary: '#606060',
+    textMuted: '#AAAAAA',
+    border: '#EFEFEF',
+    borderAlt: '#D2D2D2',
+    surfaceContainer: '#EFEFEF',
+    darkBg: '#000000',
+    darkText: '#FFFFFF',
+    darkQuoteText: '#606060',
+  },
+
+  motion: {
+    fast: '120ms',
+    base: '200ms',
+    easeStandard: 'cubic-bezier(0.2, 0, 0, 1)',
+  },
+  shadows: {
+    lg: '0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1)',
+    storyPortrait: '0 0 0 11px rgba(180, 185, 190, 0.18)',
+  },
+  images: {
+    heroPortrait: '/images/hero_portrait3.png',
+    portraitStreet: '/images/about_portrait.jpg',
+  },
+} as const
