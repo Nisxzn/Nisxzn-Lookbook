@@ -3,6 +3,8 @@ import { Sofia_Sans_Condensed, Playfair_Display, Pacifico, Spline_Sans_Mono, Beb
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { SmoothScroll } from "@/lib/components/SmoothScroll";
+import { CustomScrollbar } from "@/lib/components/CustomScrollbar";
+import { CustomCursor } from "@/lib/components/CustomCursor";
 
 const sofiaSans = Sofia_Sans_Condensed({
   variable: "--font-sofia",
@@ -84,6 +86,8 @@ export default function RootLayout({
         <link rel="preload" as="image" href="images/hero_portrait3.png" />
       </head>
       <body className="min-h-full flex flex-col">
+        <CustomCursor />
+        <CustomScrollbar />
         <SmoothScroll>{children}</SmoothScroll>
         <SpeedInsights />
       </body>
