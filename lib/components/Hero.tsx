@@ -71,7 +71,7 @@ export function Hero() {
           animationDelay: '0.04s',
         }}
       >
-        HEY, THERE I&apos;m
+        HEY, THERE I&apos;m Nithish Parameswaran
       </div>
 
       {/* Backdrop (behind wordmark) — decorative, desktop only */}
@@ -114,6 +114,7 @@ export function Hero() {
         }}
       >
         NITHISH
+        <span className="sr-only"> Nithish Parameswaran — Full Stack AI/ML Engineer</span>
       </h1>
 
       {/* Intro paragraph — move with left/top */}

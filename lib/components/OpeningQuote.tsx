@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const { typography, colors, fonts } = DESIGN_TOKENS
 
 const OPENING_QUOTE =
-  "I'm Nithish, an AI & Data Science student who enjoys turning ideas into products people can actually use. Most of my time is spent building full-stack applications, exploring AI, and refining the details that make software feel effortless."
+  "I'm Nithish Parameswaran, an AI & Data Science student who enjoys turning ideas into products people can actually use. Most of my time is spent building full-stack applications, exploring AI, and refining the details that make software feel effortless."
 
 export function OpeningQuote() {
   const quoteRef = useRef<HTMLParagraphElement>(null)

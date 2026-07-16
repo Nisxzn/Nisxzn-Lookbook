@@ -25,6 +25,7 @@ export function Header() {
       <a
         href="#top"
         data-reveal-up
+        aria-label="Nithish Parameswaran — Home"
         style={{
           fontSize: DESIGN_TOKENS.typography.header.fontSize,
           fontWeight: DESIGN_TOKENS.typography.header.fontWeight,

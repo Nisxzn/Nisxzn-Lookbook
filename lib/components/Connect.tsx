@@ -256,7 +256,7 @@ export function Connect() {
         >
           <span>© 2026</span>
           <span>Based in Coimbatore</span>
-          <span>Designed &amp; crafted by nisxzn</span>
+          <span>Designed &amp; crafted by Nithish Parameswaran</span>
           <a
             href="#top"
             style={{
@@ -298,6 +298,7 @@ export function Connect() {
           {'NITHISH'.split('').map((char, i) => (
             <span key={i} style={{ display: 'inline-block' }}>{char}</span>
           ))}
+          <span className="sr-only"> Nithish Parameswaran</span>
         </h2>
       </div>
     </>

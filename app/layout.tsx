@@ -42,24 +42,59 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? process.env.NEXT_PUBLIC_SITE_URL
   : process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "https://nisxzn.vercel.app";
+    : "https://nithish.is-a.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Nithish Parameswaran — AI/ML Engineer & Creative Developer",
-  description: "Building intelligent systems — RAG pipelines, AI agents, deep learning, and interactive digital experiences.",
+  description: "Portfolio of Nithish Parameswaran, a Full Stack AI/ML Engineer specialized in building intelligent systems, RAG pipelines, AI agents, deep learning, and interactive digital experiences.",
+  keywords: [
+    "Nithish Parameswaran",
+    "Nithish",
+    "Parameswaran",
+    "AI Engineer",
+    "ML Engineer",
+    "Full Stack Developer",
+    "Creative Developer",
+    "RAG Developer",
+    "Deep Learning",
+    "nithish.is-a.dev",
+    "Software Engineer Portfolio"
+  ],
+  authors: [{ name: "Nithish Parameswaran", url: siteUrl }],
+  creator: "Nithish Parameswaran",
+  publisher: "Nithish Parameswaran",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-placeholder",
+  },
   openGraph: {
     type: "website",
     title: "Nithish Parameswaran — AI/ML Engineer & Creative Developer",
-    description: "Building intelligent systems — RAG pipelines, AI agents, deep learning, and interactive digital experiences.",
+    description: "Portfolio of Nithish Parameswaran, a Full Stack AI/ML Engineer specialized in building intelligent systems, RAG pipelines, AI agents, deep learning, and interactive digital experiences.",
     url: siteUrl,
-    siteName: "Nithish Parameswaran",
-    images: [{ url: "/images/hero_portrait3.png", width: 1200, height: 630, alt: "Nithish Parameswaran" }],
+    siteName: "Nithish Parameswaran Portfolio",
+    locale: "en_US",
+    images: [{ url: "/images/hero_portrait3.png", width: 1200, height: 630, alt: "Nithish Parameswaran - Full Stack AI/ML Engineer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nithish Parameswaran — AI/ML Engineer & Creative Developer",
-    description: "Building intelligent systems — RAG pipelines, AI agents, deep learning, and interactive digital experiences.",
+    description: "Portfolio of Nithish Parameswaran, a Full Stack AI/ML Engineer specialized in building intelligent systems, RAG pipelines, AI agents, deep learning, and interactive digital experiences.",
+    creator: "@nisxzn",
     images: ["/images/hero_portrait3.png"],
   },
 };
@@ -75,6 +110,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nithish Parameswaran",
+    "url": "https://nithish.is-a.dev",
+    "jobTitle": "Full Stack AI/ML Engineer",
+    "email": "nithishparameswaran2005@gmail.com",
+    "telephone": "+919843043429",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/nithishparameswaran/",
+      "https://github.com/nisxzn",
+      "https://leetcode.com/u/nithishparameswaran",
+      "https://www.instagram.com/nisxzn/"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Retrieval-Augmented Generation (RAG)",
+      "Full Stack Development",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Python"
+    ]
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nithish Parameswaran Portfolio",
+    "url": "https://nithish.is-a.dev",
+    "author": "Nithish Parameswaran"
+  };
+
   return (
     <html
       lang="en"
@@ -86,6 +163,14 @@ export default function RootLayout({
         <link rel="preload" as="image" href="images/hero_portrait3.png" />
       </head>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <CustomCursor />
         <CustomScrollbar />
         <SmoothScroll>{children}</SmoothScroll>
